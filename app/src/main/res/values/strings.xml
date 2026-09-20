@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Kontrol</string>
+    <!--GERAIS-->
+    <string name="geral_textData">Data</string>
+    <string name="geral_textValor">Valor</string>
+    <string name="geral_textCategoria">Categoria</string>
+    <string name="geral_hint_descricao">Descrição</string>
+
+
+    <!--DESPESAS-->
+    <string name="despesa_textPagamaneto">Forma de Pagamento</string>
+    <string name="despesa_textDestinatario">Destinatário</string>
+    <string name="despesa_checkSalvar">Salvar destinatário</string>
+    <string name="despesa_checkMostraDestinatario">Destinatários salvos</string>
+    <string name="despesa_checkDespFixa">Despesa fixa</string>
+    <string name="despesa_btSalvarDespesa">Salvar Despesa</string>
+    <string name="despesa_hint_destinatario">Destinatário</string>
+
+    <!--RECEITAS-->
+    <string name="receita_textTransferencia">Tipo de Transferência</string>
+    <string name="receita_textRemetente">Remetente</string>
+    <string name="receita_checkSalvar">Salvar remetente</string>
+    <string name="receita_checkMostraRemetente">Remetentes salvos</string>
+    <string name="receita_checkRecFixa">Receita fixa</string>
+    <string name="receita_btSalvarDespesa">Salvar Receita</string>
+    <string name="receita_hint_remetente">Remetente</string>
+
+    <!--PONTO-->
+    <string name="ponto_titulo">Marcação de Ponto</string>
+    <string name="ponto_entrada">Entrada</string>
+    <string name="ponto_almoco_inicio">Almoço</string>
+    <string name="ponto_almoco_volta">Volta</string>
+    <string name="ponto_saida">Saída</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--LOGIN-->
+    <string name="LOGIN_INTRODUCAO">Faça login para acessar sua conta</string>
+    <string name="LOGIN_USUARIO">Usuário</string>
+    <string name="LOGIN_SENHA">Senha</string>
+    <string name="LOGIN_BOTAO_ENTRAR">Entrar</string>
+    <string name="LOGIN_INTRO_BEMVINDO">Bem-vindo de volta!</string>
+    <string name="LOGIN_SEM_CADASTRO">Não tem cadastro?</string>
+    <string name="LOGIN_CADASTRAR">Clique aqui e faça seu cadastro!</string>
+    <string name="LOGIN_AVISO_INVALIDO">Usuário ou senha inválidos, tente novamente!</string>
+
+    <!--CADASTRO-->
+    <string name="CADASTRO_INTRODUCAO">Faça seu cadastro e acesse sua conta</string>
+    <string name="CADASTRO_BOTAO_CADASTRAR">Cadastrar</string>
+    <string name="CADASTRO_INTRO_BEMVINDO">Seja bem-vindo!</string>
+    <string name="CADASTRO_USUARIO">Usuário</string>
+    <string name="CADASTRO_NOME">Nome</string>
+    <string name="CADASTRO_EMAIL">Email</string>
+    <string name="CADASTRO_CELULAR">Celular</string>
+    <string name="CADASTRO_CELULAR_DDD">DDD</string>
+    <string name="CADASTRO_CELULAR_TELEFONE">(00)00000-0000</string>
+    <string name="CADASTRO_DATA_NASC">Data de nascimento</string>
+    <string name="CADASTRO_SENHA">Senha</string>
+    <string name="CADASTRO_TEM_LOGIN">Já tem cadastro?</string>
+    <string name="CADASTRO_LOGIN">Clique aqui para fazer login!</string>
+    <string name="CADASTRO_AVISO_USU_CADASTRADO">Usuário já cadastrado!</string>
+    <string name="CADASTRO_AVISO_USU_ACEITO">Usuário disponível!</string>
+
+    <!--GERAL-->
+    <string name="AVISO_CAMPO_VAZIO">Preencha o(a) %s!</string>
+
+</resources>

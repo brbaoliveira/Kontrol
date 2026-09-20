@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/ic_home"
+        android:icon="@drawable/ic_home_24"
+        android:title="Inicio"/>
+
+    <item android:id="@+id/ic_financas"
+        android:icon="@drawable/ic_financas_24"
+        android:title="Finanças"/>
+
+    <item android:id="@+id/ic_ponto"
+        android:icon="@drawable/ic_trabalho_24"
+        android:title="Pontos"/>
+
+    <item android:id="@+id/ic_lista"
+        android:icon="@drawable/ic_list_24"
+        android:title="Listas"/>
+
+    <item android:id="@+id/ic_rotina"
+        android:icon="@drawable/ic_ponto_24"
+        android:title="Rotina"/>
+
+    <item android:id="@+id/ic_perfil"
+        android:icon="@drawable/ic_usuario_24"
+        android:title="Perfil"/>
+
+</menu>

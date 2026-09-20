@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<gradient
+    android:startColor="@color/azul_clarinho_kontrol"
+    android:centerColor="@color/azul_clarinho_kontrol"
+    android:endColor="@color/azul_clarinho_kontrol"
+    android:angle="180"
+    android:centerY="0.5"/>
+    <corners
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"/>
+</shape>

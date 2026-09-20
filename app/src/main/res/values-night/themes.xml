@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Kontrol" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!--<item name="colorPrimary">@color/azul_escuro_kontrol</item>
+        <item name="colorPrimaryDark">@color/azul_escuro_kontrol</item>
+        <item name="colorAccent">@android:color/transparent</item>-->
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+
+        <item name="android:textColor">@color/cinza</item>
+        <item name="colorPrimary">@color/azul_kontrol</item>
+    </style>
+    <style name="despesaTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/vermelho_kontrol</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@color/vermelho_escuro_kontrol</item>
+        <item name="colorAccent">@color/vermelho_claro_kontrol</item>
+    </style>
+    <style name="receitaTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/verde_kontrol</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@color/verde_escuro_kontrol</item>
+        <item name="colorAccent">@color/verde_claro_kontrol</item>
+    </style>
+</resources>

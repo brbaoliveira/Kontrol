@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+
+        android:id="@+id/appbar"
+
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:background="@drawable/bg_gradient_kontrol">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:contentScrim="?attr/colorPrimary"
+
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"></androidx.appcompat.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/ponto_iv_almoco_inicio"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                app:srcCompat="@drawable/logo_degrade" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/ponto_titulo"
+                    android:textColor="@color/white"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:background="@drawable/fundo_branco_cima"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_gradient_kontrol"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/fundo_branco_cima"
+                android:padding="24dp"
+                android:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/borda" />
+
+                    <Button
+                        android:id="@+id/button_voltar_mes"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="4dp"
+                        android:background="@drawable/seta_esquerda_24"
+                        app:backgroundTint="@color/azul_escuro_kontrol"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_mes"
+                        app:layout_constraintEnd_toStartOf="@+id/text_mes"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="@+id/text_mes" />
+
+                    <TextView
+                        android:id="@+id/text_mes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Mês"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/text_ano"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/button_voltar_mes"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_ano"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Ano"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_mes"
+                        app:layout_constraintEnd_toStartOf="@+id/button_avancar_mes"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/text_mes"
+                        app:layout_constraintTop_toTopOf="@+id/text_mes" />
+
+                    <Button
+                        android:id="@+id/button_avancar_mes"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/seta_direita_24"
+                        app:backgroundTint="@color/azul_escuro_kontrol"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_ano"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/text_ano"
+                        app:layout_constraintTop_toTopOf="@+id/text_ano" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/ponto_iv_entrada"
+                    android:layout_width="80dp"
+                    android:layout_height="120dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ponto_iv_almoco_inicio"
+                    app:layout_constraintEnd_toStartOf="@+id/ponto_iv_almoco_inicio"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ponto_iv_almoco_inicio"
+                    app:srcCompat="@drawable/bt_azul_claro_medio_liso" />
+
+                <ImageView
+                    android:id="@+id/ponto_iv_almoco_inicio"
+                    android:layout_width="80dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/ponto_iv_almoco_volta"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/ponto_iv_entrada"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                    app:srcCompat="@drawable/bt_azul_claro_liso" />
+
+                <ImageView
+                    android:id="@+id/ponto_iv_almoco_volta"
+                    android:layout_width="80dp"
+                    android:layout_height="120dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ponto_iv_almoco_inicio"
+                    app:layout_constraintEnd_toStartOf="@+id/ponto_iv_saida"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/ponto_iv_almoco_inicio"
+                    app:layout_constraintTop_toTopOf="@+id/ponto_iv_almoco_inicio"
+                    app:srcCompat="@drawable/bt_verde_claro_liso" />
+
+                <ImageView
+                    android:id="@+id/ponto_iv_saida"
+                    android:layout_width="80dp"
+                    android:layout_height="120dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ponto_iv_almoco_volta"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/ponto_iv_almoco_volta"
+                    app:layout_constraintTop_toTopOf="@+id/ponto_iv_almoco_volta"
+                    app:srcCompat="@drawable/bt_verde_claro_medio_liso" />
+
+                <ImageView
+                    android:id="@+id/ponto_iv_entrada_ic"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_entrada"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_entrada"
+                    app:layout_constraintTop_toTopOf="@+id/ponto_iv_entrada"
+                    fab:srcCompat="@drawable/ic_tempo_azul_24" />
+
+                <TextView
+                    android:id="@+id/ponto_tv_entrada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/ponto_entrada"
+                    android:textColor="@color/azul_claro_kontrol"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_entrada"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_entrada"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_iv_entrada_ic" />
+
+                <TextView
+                    android:id="@+id/ponto_text_entrada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="@color/azul_escuro_kontrol"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/ponto_iv_entrada"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_entrada"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_entrada"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_tv_entrada" />
+
+
+                <ImageView
+                    android:id="@+id/ponto_iv_almoco_inicio_ic"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_almoco_inicio"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_almoco_inicio"
+                    app:layout_constraintTop_toTopOf="@+id/ponto_iv_almoco_inicio"
+                    fab:srcCompat="@drawable/ic_almoco_entrada_24" />
+
+                <TextView
+                    android:id="@+id/ponto_tv_almoco_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/ponto_almoco_inicio"
+                    android:textColor="@color/azul_claro_kontrol"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_almoco_inicio"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_almoco_inicio"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_iv_almoco_inicio_ic" />
+
+                <TextView
+                    android:id="@+id/ponto_text_almoco_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="@color/azul_escuro_kontrol"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/ponto_iv_almoco_inicio"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_almoco_inicio"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_almoco_inicio"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_tv_almoco_inicio" />
+
+                <ImageView
+                    android:id="@+id/ponto_iv_almoco_volta_ic"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_almoco_volta"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_almoco_volta"
+                    app:layout_constraintTop_toTopOf="@+id/ponto_iv_almoco_volta"
+                    fab:srcCompat="@drawable/ic_almoco_volta_24" />
+
+                <TextView
+                    android:id="@+id/ponto_tv_almoco_volta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/ponto_almoco_volta"
+                    android:textColor="@color/verde_escuro_kontrol"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_almoco_volta"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_almoco_volta"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_iv_almoco_volta_ic" />
+
+                <TextView
+                    android:id="@+id/ponto_text_almoco_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="@color/verde_escuro_kontrol"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/ponto_iv_almoco_volta"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_almoco_volta"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_almoco_volta"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_tv_almoco_volta" />
+
+                <ImageView
+                    android:id="@+id/ponto_iv_saida_ic"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_saida"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_saida"
+                    app:layout_constraintTop_toTopOf="@+id/ponto_iv_saida"
+                    fab:srcCompat="@drawable/ic_tempo_verde_24" />
+
+                <TextView
+                    android:id="@+id/ponto_tv_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/ponto_saida"
+                    android:textColor="@color/verde_escuro_kontrol"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_saida"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_saida"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_iv_saida_ic" />
+
+                <TextView
+                    android:id="@+id/ponto_text_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="@color/verde_escuro_kontrol"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/ponto_iv_saida"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_saida"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_saida"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_tv_saida" />
+
+                <ImageView
+                    android:id="@+id/ponto_iv_horas_feitas"
+                    android:layout_width="170dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ponto_iv_valor_dia"
+                    app:layout_constraintEnd_toStartOf="@+id/ponto_iv_valor_dia"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ponto_iv_valor_dia"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:srcCompat="@drawable/bt_azul_claro_escuro_liso" />
+
+                <TextView
+                    android:id="@+id/ponto_tv_horas_feitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Horas Feitas"
+                    android:textColor="@color/azul_escuro_kontrol"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_horas_feitas"
+                    app:layout_constraintHorizontal_bias="0.30"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_horas_feitas"
+                    app:layout_constraintTop_toTopOf="@+id/ponto_iv_horas_feitas" />
+
+                <TextView
+                    android:id="@+id/ponto_text_horas_feitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="@color/cinza_medio"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/ponto_iv_horas_feitas"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_horas_feitas"
+                    app:layout_constraintHorizontal_bias="0.39"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_horas_feitas"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_tv_horas_feitas" />
+
+                <ImageView
+                    android:id="@+id/ponto_iv_valor_dia"
+                    android:layout_width="170dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/ponto_iv_horas_feitas"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_iv_almoco_inicio"
+                    app:srcCompat="@drawable/bt_verde_claro_escuro_liso"/>
+
+                <TextView
+                    android:id="@+id/ponto_tv_valor_dia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Total do dia"
+                    android:textColor="@color/verde_escuro_kontrol"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_valor_dia"
+                    app:layout_constraintHorizontal_bias="0.31"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_valor_dia"
+                    app:layout_constraintTop_toTopOf="@+id/ponto_iv_valor_dia" />
+
+                <TextView
+                    android:id="@+id/ponto_text_valor_dia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="@color/cinza_medio"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/ponto_iv_valor_dia"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_valor_dia"
+                    app:layout_constraintHorizontal_bias="0.40"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_valor_dia"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_tv_valor_dia" />
+
+                <Button
+                    android:id="@+id/ponto_bt_marcar_ponto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bt_gradient_kontrol"
+                    android:text="Marcar Ponto"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null"
+                    app:layout_constraintEnd_toEndOf="@+id/ponto_iv_valor_dia"
+                    app:layout_constraintStart_toStartOf="@+id/ponto_iv_horas_feitas"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_iv_valor_dia" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ponto_bt_marcar_ponto" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerView">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total de Horas" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
